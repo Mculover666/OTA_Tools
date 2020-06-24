@@ -372,7 +372,7 @@ void MainWindow::on_commandLinkButton_clicked()
     ui->commandLinkButton->setEnabled(true);
 
     /* 计算分区表推荐烧录地址 */
-    uint32_t recommandAddr = end - 32;
+    uint32_t recommandAddr = end;
     char recommandAddrStr[10];
     sprintf(recommandAddrStr, "0x%08x", recommandAddr);
     ui->lineEdit_2->setText(recommandAddrStr);

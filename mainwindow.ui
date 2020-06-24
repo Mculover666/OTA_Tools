@@ -366,7 +366,7 @@
           <number>1000000000</number>
          </property>
          <property name="value">
-          <number>6</number>
+          <number>4</number>
          </property>
         </widget>
        </item>
@@ -528,7 +528,7 @@
        <item>
         <widget class="QLabel" name="label_23">
          <property name="text">
-          <string>* 温馨提示：分区表推荐烧录空间为KV分区的最后32B！</string>
+          <string>* 温馨提示：分区表推荐烧录空间为KV分区之后的32B！</string>
          </property>
         </widget>
        </item>
