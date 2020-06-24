@@ -187,8 +187,7 @@ static uint32_t hexStrToUint32(QString s)
     int len = s.length();
     int i = 0;
 
-    while(len--)
-    {
+    while(len--) {
         value += ConvertHexChar(*(ch+len))*pow(16,i++);
 
     }
@@ -214,6 +213,31 @@ void MainWindow::on_commandLinkButton_clicked()
     /* 获取Flash起始地址 */
     //获取用户填入的十六进制字符
     QString flashStartAddrStr = ui->lineEdit->text();
+
+    //判断
+    if(flashStartAddrStr.isEmpty()) {
+        //判断输入是否为空
+        QMessageBox::information(NULL, "输入有误", "啊哦~你忘记输入Flash起始地址啦！",QMessageBox::No, QMessageBox::No);
+        ui->commandLinkButton->setEnabled(true);
+        return;
+    }
+    else {
+        //判断输入是否是0x开头的数
+        QChar ch1 = flashStartAddrStr.at( 0 );
+        QChar ch2 = flashStartAddrStr.at( 1 );
+
+        qDebug("ch1 = %c ch2 = %c", ch1, ch2);
+        if(ch1 == '0' && ( ch2 == 'x' || ch2 == 'X')) {
+
+        }
+        else {
+            QMessageBox::information(NULL, "输入有误", "啊哦~请输入0x开头的十六进制地址！",QMessageBox::No, QMessageBox::No);
+            ui->commandLinkButton->setEnabled(true);
+            return;
+        }
+    }
+
+
     //去除字符串最开始的0x
     QString flashStartAddrHex = flashStartAddrStr.remove(0,2);
     //转化为long
@@ -242,7 +266,6 @@ void MainWindow::on_commandLinkButton_clicked()
     param.version.minor = version_minor;
     qDebug("default Version is:%d.%d", version_major, version_minor);
 
-    //
     uint32_t start, end;
 
     /* 获取用户输入的bootloader分区大小 */
