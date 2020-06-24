@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>340</width>
-    <height>360</height>
+    <height>390</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -19,7 +19,7 @@
   <property name="maximumSize">
    <size>
     <width>340</width>
-    <height>360</height>
+    <height>390</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -45,7 +45,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -56,7 +56,7 @@
        <rect>
         <x>10</x>
         <y>70</y>
-        <width>281</width>
+        <width>290</width>
         <height>25</height>
        </rect>
       </property>
@@ -105,7 +105,7 @@
        <rect>
         <x>10</x>
         <y>160</y>
-        <width>281</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>
@@ -170,7 +170,7 @@
        <rect>
         <x>10</x>
         <y>100</y>
-        <width>281</width>
+        <width>290</width>
         <height>25</height>
        </rect>
       </property>
@@ -329,7 +329,7 @@
        <rect>
         <x>10</x>
         <y>200</y>
-        <width>281</width>
+        <width>291</width>
         <height>25</height>
        </rect>
       </property>
@@ -402,19 +402,6 @@
        <string>Flash起始地址:</string>
       </property>
      </widget>
-     <widget class="QCommandLinkButton" name="commandLinkButton">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>280</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Generate</string>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
@@ -433,7 +420,7 @@
        <rect>
         <x>10</x>
         <y>130</y>
-        <width>281</width>
+        <width>290</width>
         <height>25</height>
        </rect>
       </property>
@@ -488,7 +475,7 @@
        <rect>
         <x>10</x>
         <y>260</y>
-        <width>261</width>
+        <width>271</width>
         <height>25</height>
        </rect>
       </property>
@@ -496,7 +483,52 @@
        <item>
         <widget class="QLabel" name="label_10">
          <property name="text">
-          <string>温馨提示：分区表烧录之后自身大小占用32B哦！</string>
+          <string>推荐烧录地址:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>18</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_2"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>复制</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_17">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>332</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_17">
+       <item>
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>* 温馨提示：分区表推荐烧录空间为KV分区的最后32B！</string>
          </property>
         </widget>
        </item>
@@ -896,6 +928,19 @@
       </property>
      </widget>
     </widget>
+   </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>330</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generate</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

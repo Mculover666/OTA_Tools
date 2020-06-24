@@ -348,4 +348,9 @@ void MainWindow::on_commandLinkButton_clicked()
     QMessageBox::information(NULL, "生成成功", "文件已放到程序运行目录下啦!(pt_tbl.bin)",QMessageBox::Ok, QMessageBox::Ok);
     ui->commandLinkButton->setEnabled(true);
 
+    /* 计算分区表推荐烧录地址 */
+    uint32_t recommandAddr = end - 32;
+    char recommandAddrStr[10];
+    sprintf(recommandAddrStr, "0x%08x", recommandAddr);
+    ui->lineEdit_2->setText(recommandAddrStr);
 }
